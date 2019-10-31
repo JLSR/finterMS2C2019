@@ -1,0 +1,10 @@
+C:\FILEs\Matematica Superior 2C2019\TP2C2019-FINTER\Finter\Finter\bin\Debug\Finter.exe.config
+C:\FILEs\Matematica Superior 2C2019\TP2C2019-FINTER\Finter\Finter\bin\Debug\Finter.exe
+C:\FILEs\Matematica Superior 2C2019\TP2C2019-FINTER\Finter\Finter\bin\Debug\Finter.pdb
+C:\FILEs\Matematica Superior 2C2019\TP2C2019-FINTER\Finter\Finter\obj\Debug\Finter.csprojResolveAssemblyReference.cache
+C:\FILEs\Matematica Superior 2C2019\TP2C2019-FINTER\Finter\Finter\obj\Debug\Finter.frmInicio.resources
+C:\FILEs\Matematica Superior 2C2019\TP2C2019-FINTER\Finter\Finter\obj\Debug\Finter.Properties.Resources.resources
+C:\FILEs\Matematica Superior 2C2019\TP2C2019-FINTER\Finter\Finter\obj\Debug\Finter.csproj.GenerateResource.Cache
+C:\FILEs\Matematica Superior 2C2019\TP2C2019-FINTER\Finter\Finter\obj\Debug\Finter.exe
+C:\FILEs\Matematica Superior 2C2019\TP2C2019-FINTER\Finter\Finter\obj\Debug\Finter.pdb
+C:\FILEs\Matematica Superior 2C2019\TP2C2019-FINTER\Finter\Finter\obj\Debug\Finter.frmPasosDeCalculos.resources
