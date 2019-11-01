@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Finter
 {
-    public partial class frmInicio : Form
+    public partial class FrmInicio : Form
     {
-        public frmInicio()
+        public FrmInicio()
         {
             InitializeComponent();
         }
@@ -27,6 +27,9 @@ namespace Finter
                     Double y = Double.Parse(txtY.Text);
                         
                     dgvPuntos.Rows.Add(x, y);
+
+                    txtX.Clear();
+                    txtY.Clear();
                 }
                 else
                 {
@@ -46,7 +49,10 @@ namespace Finter
 
         private void btnQuitarPunto_Click(object sender, EventArgs e)
         {
+            if (dgvPuntos.CurrentRow != null)
+            {
             dgvPuntos.Rows.RemoveAt(dgvPuntos.CurrentRow.Index);
+            }
         }
 
         private void btnQuitarTodos_Click(object sender, EventArgs e)
@@ -67,6 +73,60 @@ namespace Finter
             if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPasosCalculos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEspecializarEnK_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAlterarDatos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFinIngreso_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Procesar_Click(object sender, EventArgs e)
+        {
+            if (opLagrange.Checked)
+            {
+                FrmLagrange form = new FrmLagrange();
+                form.Show();
+            }
+            else if (opNGProgre.Checked)
+            {
+                FrmNewtonGregory form = new FrmNewtonGregory();
+                form.Show();
+            }
+            else if (opNGRegresiva.Checked)
+            {
+                FrmNewtonGregory form = new FrmNewtonGregory();
+                form.Show();
             }
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace Finter
 {
-    partial class frmPasosDeCalculos
+    partial class FrmPasosDeCalculos
     {
         /// <summary>
         /// Required designer variable.
