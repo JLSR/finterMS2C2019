@@ -180,7 +180,9 @@
             this.txtY.Margin = new System.Windows.Forms.Padding(2);
             this.txtY.Name = "txtY";
             this.txtY.Size = new System.Drawing.Size(52, 20);
-            this.txtY.TabIndex = 42;
+            this.txtY.TabIndex = 1;
+            this.txtY.TextChanged += new System.EventHandler(this.txtY_TextChanged);
+            this.txtY.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtY_KeyDown);
             this.txtY.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtY_KeyPress);
             // 
             // txtX
@@ -189,26 +191,27 @@
             this.txtX.Margin = new System.Windows.Forms.Padding(2);
             this.txtX.Name = "txtX";
             this.txtX.Size = new System.Drawing.Size(52, 20);
-            this.txtX.TabIndex = 41;
+            this.txtX.TabIndex = 0;
+            this.txtX.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtX_KeyDown);
             this.txtX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtX_KeyPress);
             // 
             // btnAgregarPunto
             // 
-            this.btnAgregarPunto.Location = new System.Drawing.Point(93, 33);
+            this.btnAgregarPunto.Location = new System.Drawing.Point(93, 24);
             this.btnAgregarPunto.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarPunto.Name = "btnAgregarPunto";
-            this.btnAgregarPunto.Size = new System.Drawing.Size(81, 32);
-            this.btnAgregarPunto.TabIndex = 40;
+            this.btnAgregarPunto.Size = new System.Drawing.Size(81, 41);
+            this.btnAgregarPunto.TabIndex = 2;
             this.btnAgregarPunto.Text = "Agregar Punto";
             this.btnAgregarPunto.UseVisualStyleBackColor = true;
             this.btnAgregarPunto.Click += new System.EventHandler(this.btnAgregarPunto_Click);
             // 
             // btnQuitarTodos
             // 
-            this.btnQuitarTodos.Location = new System.Drawing.Point(217, 160);
+            this.btnQuitarTodos.Location = new System.Drawing.Point(214, 160);
             this.btnQuitarTodos.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuitarTodos.Name = "btnQuitarTodos";
-            this.btnQuitarTodos.Size = new System.Drawing.Size(77, 32);
+            this.btnQuitarTodos.Size = new System.Drawing.Size(80, 32);
             this.btnQuitarTodos.TabIndex = 47;
             this.btnQuitarTodos.Text = "Quitar Todos";
             this.btnQuitarTodos.UseVisualStyleBackColor = true;
@@ -228,6 +231,9 @@
             // dgvPuntos
             // 
             this.dgvPuntos.AllowUserToAddRows = false;
+            this.dgvPuntos.AllowUserToDeleteRows = false;
+            this.dgvPuntos.AllowUserToResizeColumns = false;
+            this.dgvPuntos.AllowUserToResizeRows = false;
             this.dgvPuntos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPuntos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvPuntos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -280,6 +286,7 @@
             this.Controls.Add(this.dgvPuntos);
             this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.btnAlterarDatos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FrmInicio";

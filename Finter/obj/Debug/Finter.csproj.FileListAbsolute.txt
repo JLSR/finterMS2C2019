@@ -20,3 +20,15 @@ D:\01- NATALIA\01-CURSOS\01-CURSANDO\04- Matematica superior\TP\finterMS2C2019\F
 D:\01- NATALIA\01-CURSOS\01-CURSANDO\04- Matematica superior\TP\finterMS2C2019\Finter\obj\Debug\Finter.csproj.GenerateResource.Cache
 D:\01- NATALIA\01-CURSOS\01-CURSANDO\04- Matematica superior\TP\finterMS2C2019\Finter\obj\Debug\Finter.FrmLagrange.resources
 D:\01- NATALIA\01-CURSOS\01-CURSANDO\04- Matematica superior\TP\finterMS2C2019\Finter\obj\Debug\Finter.FrmNewtonGregory.resources
+F:\workspace\personal\Naty\finterMS2C2019-copia\Finter\bin\Debug\Finter.exe.config
+F:\workspace\personal\Naty\finterMS2C2019-copia\Finter\bin\Debug\Finter.exe
+F:\workspace\personal\Naty\finterMS2C2019-copia\Finter\bin\Debug\Finter.pdb
+F:\workspace\personal\Naty\finterMS2C2019-copia\Finter\obj\Debug\Finter.csprojAssemblyReference.cache
+F:\workspace\personal\Naty\finterMS2C2019-copia\Finter\obj\Debug\Finter.FrmInicio.resources
+F:\workspace\personal\Naty\finterMS2C2019-copia\Finter\obj\Debug\Finter.FrmLagrange.resources
+F:\workspace\personal\Naty\finterMS2C2019-copia\Finter\obj\Debug\Finter.FrmNewtonGregory.resources
+F:\workspace\personal\Naty\finterMS2C2019-copia\Finter\obj\Debug\Finter.FrmPasosDeCalculos.resources
+F:\workspace\personal\Naty\finterMS2C2019-copia\Finter\obj\Debug\Finter.Properties.Resources.resources
+F:\workspace\personal\Naty\finterMS2C2019-copia\Finter\obj\Debug\Finter.csproj.GenerateResource.cache
+F:\workspace\personal\Naty\finterMS2C2019-copia\Finter\obj\Debug\Finter.exe
+F:\workspace\personal\Naty\finterMS2C2019-copia\Finter\obj\Debug\Finter.pdb

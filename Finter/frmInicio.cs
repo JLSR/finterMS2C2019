@@ -30,6 +30,7 @@ namespace Finter
 
                     txtX.Clear();
                     txtY.Clear();
+                    txtX.Focus();
                 }
                 else
                 {
@@ -44,7 +45,7 @@ namespace Finter
 
         private void frmInicio_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnQuitarPunto_Click(object sender, EventArgs e)
@@ -64,7 +65,7 @@ namespace Finter
         {
             if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != '.'))
             {
-                e.Handled = true;                
+                e.Handled = true;
             }
         }
 
@@ -115,7 +116,17 @@ namespace Finter
         {
             if (opLagrange.Checked)
             {
-                FrmLagrange form = new FrmLagrange();
+                List<KeyValuePair<double, double>> valores = new List<KeyValuePair<double, double>>();
+                foreach (DataGridViewRow row in dgvPuntos.Rows)
+                {
+                    valores.Add(
+                        new KeyValuePair<double, double>(
+                            Double.Parse(row.Cells["X"].Value.ToString()),
+                            Double.Parse(row.Cells["Y"].Value.ToString())
+                        ));
+                }
+
+                FrmLagrange form = new FrmLagrange(valores);
                 form.Show();
             }
             else if (opNGProgre.Checked)
@@ -128,6 +139,21 @@ namespace Finter
                 FrmNewtonGregory form = new FrmNewtonGregory();
                 form.Show();
             }
+        }
+
+        private void txtX_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) txtY.Focus();
+        }
+
+        private void txtY_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) btnAgregarPunto.Focus();
+        }
+
+        private void txtY_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
