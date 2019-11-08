@@ -32,3 +32,15 @@ F:\workspace\personal\Naty\finterMS2C2019-copia\Finter\obj\Debug\Finter.Properti
 F:\workspace\personal\Naty\finterMS2C2019-copia\Finter\obj\Debug\Finter.csproj.GenerateResource.cache
 F:\workspace\personal\Naty\finterMS2C2019-copia\Finter\obj\Debug\Finter.exe
 F:\workspace\personal\Naty\finterMS2C2019-copia\Finter\obj\Debug\Finter.pdb
+C:\workspace\finter\Finter\bin\Debug\Finter.exe.config
+C:\workspace\finter\Finter\bin\Debug\Finter.exe
+C:\workspace\finter\Finter\bin\Debug\Finter.pdb
+C:\workspace\finter\Finter\obj\Debug\Finter.csprojAssemblyReference.cache
+C:\workspace\finter\Finter\obj\Debug\Finter.FrmInicio.resources
+C:\workspace\finter\Finter\obj\Debug\Finter.FrmLagrange.resources
+C:\workspace\finter\Finter\obj\Debug\Finter.FrmNewtonGregory.resources
+C:\workspace\finter\Finter\obj\Debug\Finter.FrmPasosDeCalculos.resources
+C:\workspace\finter\Finter\obj\Debug\Finter.Properties.Resources.resources
+C:\workspace\finter\Finter\obj\Debug\Finter.csproj.GenerateResource.cache
+C:\workspace\finter\Finter\obj\Debug\Finter.exe
+C:\workspace\finter\Finter\obj\Debug\Finter.pdb

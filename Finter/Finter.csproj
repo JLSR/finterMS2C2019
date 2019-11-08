@@ -68,8 +68,10 @@
     <Compile Include="FrmPasosDeCalculos.Designer.cs">
       <DependentUpon>FrmPasosDeCalculos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lagrange.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util.cs" />
     <EmbeddedResource Include="FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </EmbeddedResource>

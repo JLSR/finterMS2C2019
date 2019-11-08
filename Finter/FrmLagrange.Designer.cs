@@ -36,17 +36,17 @@
             // 
             // txtFuncion
             // 
-            this.txtFuncion.Location = new System.Drawing.Point(54, 19);
+            this.txtFuncion.Location = new System.Drawing.Point(63, 22);
             this.txtFuncion.Name = "txtFuncion";
-            this.txtFuncion.Size = new System.Drawing.Size(384, 20);
+            this.txtFuncion.Size = new System.Drawing.Size(447, 23);
             this.txtFuncion.TabIndex = 0;
             // 
             // chkPasos
             // 
             this.chkPasos.AutoSize = true;
-            this.chkPasos.Location = new System.Drawing.Point(457, 21);
+            this.chkPasos.Location = new System.Drawing.Point(533, 24);
             this.chkPasos.Name = "chkPasos";
-            this.chkPasos.Size = new System.Drawing.Size(93, 17);
+            this.chkPasos.Size = new System.Drawing.Size(100, 19);
             this.chkPasos.TabIndex = 1;
             this.chkPasos.Text = "Mostrar Pasos";
             this.chkPasos.UseVisualStyleBackColor = true;
@@ -55,26 +55,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 22);
+            this.label1.Location = new System.Drawing.Point(15, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(39, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "P(k) =";
             // 
             // txtPasos
             // 
-            this.txtPasos.Location = new System.Drawing.Point(16, 66);
+            this.txtPasos.Location = new System.Drawing.Point(18, 76);
             this.txtPasos.Multiline = true;
             this.txtPasos.Name = "txtPasos";
             this.txtPasos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtPasos.Size = new System.Drawing.Size(537, 317);
+            this.txtPasos.Size = new System.Drawing.Size(626, 365);
             this.txtPasos.TabIndex = 3;
             // 
             // FrmLagrange
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 404);
+            this.ClientSize = new System.Drawing.Size(656, 466);
             this.Controls.Add(this.txtPasos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chkPasos);
@@ -87,7 +87,6 @@
             this.Load += new System.EventHandler(this.FrmLagrange_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

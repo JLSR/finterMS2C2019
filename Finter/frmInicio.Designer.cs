@@ -55,7 +55,7 @@
             // btnAlterarDatos
             // 
             this.btnAlterarDatos.Enabled = false;
-            this.btnAlterarDatos.Location = new System.Drawing.Point(16, 354);
+            this.btnAlterarDatos.Location = new System.Drawing.Point(47, 354);
             this.btnAlterarDatos.Margin = new System.Windows.Forms.Padding(2);
             this.btnAlterarDatos.Name = "btnAlterarDatos";
             this.btnAlterarDatos.Size = new System.Drawing.Size(89, 36);

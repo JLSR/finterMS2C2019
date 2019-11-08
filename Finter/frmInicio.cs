@@ -19,13 +19,18 @@ namespace Finter
 
         private void btnAgregarPunto_Click(object sender, EventArgs e)
         {
-            if(txtX.Text !="" && txtY.Text !="")
+            AgregarParValores();
+        }
+
+        private void AgregarParValores()
+        {
+            if (txtX.Text != "" && txtY.Text != "")
             {
                 if (Double.Parse(txtY.Text) != 0)
                 {
                     Double x = Double.Parse(txtX.Text);
                     Double y = Double.Parse(txtY.Text);
-                        
+
                     dgvPuntos.Rows.Add(x, y);
 
                     txtX.Clear();
@@ -103,9 +108,43 @@ namespace Finter
         }
 
         private void btnAlterarDatos_Click(object sender, EventArgs e)
-        {
+            {
+                // (x^2 + 2x -3)
+                var a = new double[] { -3, 2, 1 };
+                // (x+2)
+                var b = new double[] { 2, 1 };
 
-        }
+                var m = Multiply(a, b);
+                Console.WriteLine(PolinomyToString(m));
+
+            }
+
+
+            static double[] Multiply(double[] a, double[] b)
+            {
+                var result = new double[a.Length + b.Length - 1];
+                for (int i = 0; i < a.Length; i++)
+                {
+                    for (int j = 0; j < b.Length; j++)
+                    {
+                        result[i + j] += a[i] * b[j];
+                    }
+                }
+                return result;
+            }
+
+            static string PolinomyToString(double[] p)
+            {
+                var sb = new StringBuilder();
+                for (int i = 0; i < p.Length; i++)
+                {
+                    if (i > 0) sb.Append(" + ");
+                    sb.Append(p[i].ToString());
+                    if (i > 0) sb.Append("x^").Append(i.ToString());
+                }
+                return sb.ToString();
+
+            }
 
         private void btnFinIngreso_Click(object sender, EventArgs e)
         {
@@ -148,7 +187,7 @@ namespace Finter
 
         private void txtY_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) btnAgregarPunto.Focus();
+            if (e.KeyCode == Keys.Enter) AgregarParValores();
         }
 
         private void txtY_TextChanged(object sender, EventArgs e)
