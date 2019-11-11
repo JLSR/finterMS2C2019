@@ -54,7 +54,8 @@ namespace Finter
             {
                 retorno += "L(" + i + ") = " + polinomios[i].NumeradorString + "  /  " + polinomios[i].DenominadorString + Environment.NewLine;
             }
-            return ("Inicia interpolación Lagrange" + Environment.NewLine) + retorno + "Finalización interpolación Lagrange";
+
+            return retorno;
         }
     }
 }

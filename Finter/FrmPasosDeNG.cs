@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Finter
 {
-    public partial class FrmPasosDeCalculos : Form
+    public partial class FrmPasosDeCalculosNG : Form
     {
-        public FrmPasosDeCalculos()
+        public FrmPasosDeCalculosNG()
         {
             InitializeComponent();
         }

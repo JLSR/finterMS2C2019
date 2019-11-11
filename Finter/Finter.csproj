@@ -31,7 +31,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>finter_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -62,13 +66,20 @@
     <Compile Include="FrmNewtonGregory.Designer.cs">
       <DependentUpon>FrmNewtonGregory.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPasosDeCalculos.cs">
+    <Compile Include="FrmPasosDeLagrange.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPasosDeCalculos.Designer.cs">
-      <DependentUpon>FrmPasosDeCalculos.cs</DependentUpon>
+    <Compile Include="FrmPasosDeLagrange.Designer.cs">
+      <DependentUpon>FrmPasosDeLagrange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPasosDeNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPasosDeNG.designer.cs">
+      <DependentUpon>FrmPasosDeNG.cs</DependentUpon>
     </Compile>
     <Compile Include="Lagrange.cs" />
+    <Compile Include="NG.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util.cs" />
@@ -81,8 +92,11 @@
     <EmbeddedResource Include="FrmNewtonGregory.resx">
       <DependentUpon>FrmNewtonGregory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPasosDeCalculos.resx">
-      <DependentUpon>FrmPasosDeCalculos.cs</DependentUpon>
+    <EmbeddedResource Include="FrmPasosDeLagrange.resx">
+      <DependentUpon>FrmPasosDeLagrange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPasosDeNG.resx">
+      <DependentUpon>FrmPasosDeNG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -92,6 +106,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -105,6 +120,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="equation.ico" />
+    <Content Include="finter_icon.ico" />
+    <None Include="Resources\finter_logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

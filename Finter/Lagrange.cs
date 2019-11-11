@@ -55,5 +55,10 @@ namespace Finter
 
             return "Pendiente";
         }
+
+        public string ObtenerPk(double d, double pEnY)
+        {
+            return "Pendiente";
+        }
     }
 }

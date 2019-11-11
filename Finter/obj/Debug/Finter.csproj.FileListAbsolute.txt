@@ -44,3 +44,4 @@ C:\workspace\finter\Finter\obj\Debug\Finter.Properties.Resources.resources
 C:\workspace\finter\Finter\obj\Debug\Finter.csproj.GenerateResource.cache
 C:\workspace\finter\Finter\obj\Debug\Finter.exe
 C:\workspace\finter\Finter\obj\Debug\Finter.pdb
+C:\workspace\finter\Finter\obj\Debug\Finter.FrmPasosDeCalculosNG.resources
