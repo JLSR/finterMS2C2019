@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPasosDeCalculos));
             this.txtPasos = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -50,11 +51,12 @@
             this.ClientSize = new System.Drawing.Size(572, 257);
             this.Controls.Add(this.txtPasos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FrmPasosDeCalculos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pasos de Lagrange";
+            this.Text = "Pasos de Lagrange - Finter";
             this.Load += new System.EventHandler(this.FrmPasosDeCalculos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

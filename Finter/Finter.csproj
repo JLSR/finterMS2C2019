@@ -54,18 +54,6 @@
     <Compile Include="FrmInicio.Designer.cs">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmLagrange.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmLagrange.Designer.cs">
-      <DependentUpon>FrmLagrange.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmNewtonGregory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmNewtonGregory.Designer.cs">
-      <DependentUpon>FrmNewtonGregory.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmPasosDeLagrange.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,12 +73,6 @@
     <Compile Include="Util.cs" />
     <EmbeddedResource Include="FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmLagrange.resx">
-      <DependentUpon>FrmLagrange.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmNewtonGregory.resx">
-      <DependentUpon>FrmNewtonGregory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPasosDeLagrange.resx">
       <DependentUpon>FrmPasosDeLagrange.cs</DependentUpon>
@@ -122,7 +104,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="equation.ico" />
     <Content Include="finter_icon.ico" />
     <None Include="Resources\finter_logo.png" />
   </ItemGroup>

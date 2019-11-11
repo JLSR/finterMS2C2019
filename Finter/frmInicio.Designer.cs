@@ -79,10 +79,10 @@
             this.btnFinalizar.FlatAppearance.BorderSize = 0;
             this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.Location = new System.Drawing.Point(16, 661);
+            this.btnFinalizar.Location = new System.Drawing.Point(16, 649);
             this.btnFinalizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(560, 44);
+            this.btnFinalizar.Size = new System.Drawing.Size(560, 31);
             this.btnFinalizar.TabIndex = 4;
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = true;
@@ -300,7 +300,7 @@
             // 
             this.groupBox4.Controls.Add(this.txtPolinomio);
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(16, 493);
+            this.groupBox4.Location = new System.Drawing.Point(16, 479);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
@@ -348,7 +348,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 716);
+            this.ClientSize = new System.Drawing.Size(589, 689);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnEspecializarEnK);
             this.Controls.Add(this.groupBox4);
