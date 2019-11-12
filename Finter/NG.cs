@@ -118,7 +118,10 @@ namespace Finter
                         aux += "(X-" + valores[j].Key + ")";
                     }
 
-                    p += "+" + listaDeListas[i][0].R + aux;
+                    if (listaDeListas[i][0].R < 0)
+                        p += listaDeListas[i][0].R + aux;
+                    else
+                        p += "+" + listaDeListas[i][0].R + aux;
                 }
 
                 return p;
@@ -136,8 +139,10 @@ namespace Finter
                     {
                         aux += "(X-" + valores[j].Key + ")";
                     }
-
-                    p += "+" + listaDeListas[i][listaDeListas[i].Count - 1].R + aux;
+                    if (listaDeListas[i][listaDeListas[i].Count - 1].R < 0)
+                        p += listaDeListas[i][listaDeListas[i].Count - 1].R + aux;
+                    else
+                        p += "+" + listaDeListas[i][listaDeListas[i].Count - 1].R + aux;
                 }
 
                 return p;
