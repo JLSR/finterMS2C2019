@@ -105,6 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="finter_icon.ico" />
+    <None Include="Resources\Finter3.png" />
+    <None Include="Resources\Finter2.png" />
+    <None Include="Resources\Finter1.png" />
     <None Include="Resources\finter_logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

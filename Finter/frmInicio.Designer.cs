@@ -109,7 +109,7 @@
             this.opNGRegresiva.Location = new System.Drawing.Point(103, 60);
             this.opNGRegresiva.Margin = new System.Windows.Forms.Padding(2);
             this.opNGRegresiva.Name = "opNGRegresiva";
-            this.opNGRegresiva.Size = new System.Drawing.Size(119, 17);
+            this.opNGRegresiva.Size = new System.Drawing.Size(142, 23);
             this.opNGRegresiva.TabIndex = 63;
             this.opNGRegresiva.Text = "Formula Regresiva";
             this.opNGRegresiva.UseVisualStyleBackColor = true;
@@ -131,7 +131,7 @@
             this.opLagrange.Location = new System.Drawing.Point(16, 47);
             this.opLagrange.Margin = new System.Windows.Forms.Padding(2);
             this.opLagrange.Name = "opLagrange";
-            this.opLagrange.Size = new System.Drawing.Size(73, 17);
+            this.opLagrange.Size = new System.Drawing.Size(87, 23);
             this.opLagrange.TabIndex = 59;
             this.opLagrange.TabStop = true;
             this.opLagrange.Text = "Lagrange";
@@ -168,7 +168,7 @@
             this.label2.Location = new System.Drawing.Point(8, 47);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 13);
+            this.label2.Size = new System.Drawing.Size(24, 19);
             this.label2.TabIndex = 44;
             this.label2.Text = "Y: ";
             // 
@@ -178,7 +178,7 @@
             this.label1.Location = new System.Drawing.Point(8, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 13);
+            this.label1.Size = new System.Drawing.Size(24, 19);
             this.label1.TabIndex = 43;
             this.label1.Text = "X: ";
             // 
@@ -187,7 +187,7 @@
             this.txtY.Location = new System.Drawing.Point(31, 47);
             this.txtY.Margin = new System.Windows.Forms.Padding(2);
             this.txtY.Name = "txtY";
-            this.txtY.Size = new System.Drawing.Size(52, 22);
+            this.txtY.Size = new System.Drawing.Size(52, 26);
             this.txtY.TabIndex = 1;
             this.txtY.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtY_KeyDown);
             // 
@@ -196,7 +196,7 @@
             this.txtX.Location = new System.Drawing.Point(31, 24);
             this.txtX.Margin = new System.Windows.Forms.Padding(2);
             this.txtX.Name = "txtX";
-            this.txtX.Size = new System.Drawing.Size(52, 22);
+            this.txtX.Size = new System.Drawing.Size(52, 26);
             this.txtX.TabIndex = 0;
             this.txtX.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtX_KeyDown);
             this.txtX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtX_KeyPress);
@@ -336,17 +336,17 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Finter.Properties.Resources.finter_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 14);
+            this.pictureBox1.Image = global::Finter.Properties.Resources.Finter3;
+            this.pictureBox1.Location = new System.Drawing.Point(28, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(540, 125);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.Size = new System.Drawing.Size(535, 132);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 56;
             this.pictureBox1.TabStop = false;
             // 
             // FrmInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(589, 689);
             this.Controls.Add(this.pictureBox1);
@@ -379,7 +379,6 @@
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
