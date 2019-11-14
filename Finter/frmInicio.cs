@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 
@@ -69,7 +70,7 @@ namespace Finter
 
         private void txtX_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char) Keys.Back) && (e.KeyChar != '.'))
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
@@ -77,7 +78,7 @@ namespace Finter
 
         private void txtY_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char) Keys.Back) && (e.KeyChar != '.'))
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
@@ -90,7 +91,9 @@ namespace Finter
 
         private void txtY_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) AgregarParValores();
+            if (e.KeyCode != Keys.Enter) return;
+            e.Handled = e.SuppressKeyPress = true;
+            AgregarParValores();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -123,10 +126,16 @@ namespace Finter
 
         private void Procesar_Click(object sender, EventArgs e)
         {
+            if (dgvPuntos.Rows.Count == 0)
+            {
+                MessageBox.Show("Debe ingresar valores para procesar", "Coordenadas vacías", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             BloquearControles();
 
             //DEBEN ESTAR ORDENADOS LOS PUNTOS, SEGUN LAS Xi, PARA PODER SABER SI SON EQUIESPACIADAS
-            dgvPuntos.Sort(dgvPuntos.Columns[0], System.ComponentModel.ListSortDirection.Ascending);
+            dgvPuntos.Sort(dgvPuntos.Columns[0], ListSortDirection.Ascending);
 
             _valores = new List<KeyValuePair<double, double>>();
             foreach (DataGridViewRow row in dgvPuntos.Rows)
@@ -161,7 +170,7 @@ namespace Finter
                 }
                 else
                 {
-                    var frmPasosDeCalculos = new FrmPasosDeCalculos(_lagrange.ObtenerPasos());
+                    var frmPasosDeCalculos = new FrmPasosDeCalculos(_lagrange.ObtenerPasos(), _lagrange.ObtenerGrado(), EsEquiespaciado());
                     frmPasosDeCalculos.Show();
                 }
             }
@@ -196,11 +205,35 @@ namespace Finter
                 }
                 else if (opLagrange.Checked)
                 {
-                    resultado = _lagrange.ObtenerPk(k, pEnY);
+                    resultado = _lagrange.ObtenerPk(k);
                 }
 
                 MessageBox.Show("P(" + k + ") = " + resultado, "Valor de la Imagen", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        public string EsEquiespaciado()
+        {
+            var h = Convert.ToDouble(dgvPuntos[0, 1].Value) - Convert.ToDouble(dgvPuntos[0, 0].Value);
+            var equiespaciado = "Si";
+
+            for (var i = 2; i < dgvPuntos.RowCount && equiespaciado == "Si"; i++)
+            {
+                var aux = Convert.ToDouble(dgvPuntos[0, i].Value) - Convert.ToDouble(dgvPuntos[0, i - 1].Value);
+                if (aux != h) equiespaciado = "No";
+            }
+
+            return equiespaciado;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Grupo MIXTO_7 " + Environment.NewLine + Environment.NewLine +
+                            "Natalia Perez (116034-5) " + Environment.NewLine +
+                            "Alexander Loyaga (120739-8) " + Environment.NewLine +
+                            "Martin Dominguez (162787-9) " + Environment.NewLine +
+                            "Nicolás Agustín Molina (159413-8)" + Environment.NewLine +
+                            "Jose Luis Siñani Ramos (122971-0)", "GRUPO MIXTO_7 - FINTER", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

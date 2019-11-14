@@ -30,25 +30,47 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPasosDeCalculos));
             this.txtPasos = new System.Windows.Forms.TextBox();
+            this.lblGrado = new System.Windows.Forms.Label();
+            this.lblEquiespaciado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtPasos
             // 
             this.txtPasos.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPasos.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasos.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPasos.Location = new System.Drawing.Point(10, 10);
             this.txtPasos.Multiline = true;
             this.txtPasos.Name = "txtPasos";
             this.txtPasos.ReadOnly = true;
-            this.txtPasos.Size = new System.Drawing.Size(552, 237);
+            this.txtPasos.Size = new System.Drawing.Size(915, 237);
             this.txtPasos.TabIndex = 0;
             this.txtPasos.TabStop = false;
+            // 
+            // lblGrado
+            // 
+            this.lblGrado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrado.Location = new System.Drawing.Point(10, 254);
+            this.lblGrado.Name = "lblGrado";
+            this.lblGrado.Size = new System.Drawing.Size(551, 20);
+            this.lblGrado.TabIndex = 1;
+            this.lblGrado.Text = "Grado del Polinomio: ";
+            // 
+            // lblEquiespaciado
+            // 
+            this.lblEquiespaciado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEquiespaciado.Location = new System.Drawing.Point(10, 283);
+            this.lblEquiespaciado.Name = "lblEquiespaciado";
+            this.lblEquiespaciado.Size = new System.Drawing.Size(551, 20);
+            this.lblEquiespaciado.TabIndex = 2;
+            this.lblEquiespaciado.Text = "Equiespaciado: ";
             // 
             // FrmPasosDeCalculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 257);
+            this.ClientSize = new System.Drawing.Size(937, 314);
+            this.Controls.Add(this.lblEquiespaciado);
+            this.Controls.Add(this.lblGrado);
             this.Controls.Add(this.txtPasos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -66,5 +88,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtPasos;
+        private System.Windows.Forms.Label lblGrado;
+        private System.Windows.Forms.Label lblEquiespaciado;
     }
 }

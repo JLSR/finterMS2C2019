@@ -55,3 +55,14 @@ C:\FILEs\Matematica Superior 2C2019\TP\finterMS2C2019\Finter\obj\Debug\Finter.Fr
 C:\FILEs\Matematica Superior 2C2019\TP\finterMS2C2019\Finter\obj\Debug\Finter.FrmPasosDeCalculosNG.resources
 C:\FILEs\Matematica Superior 2C2019\TP\finterMS2C2019\Finter\obj\Debug\Finter.Properties.Resources.resources
 C:\FILEs\Matematica Superior 2C2019\TP\finterMS2C2019\Finter\obj\Debug\Finter.csproj.GenerateResource.Cache
+C:\workspace\finterMS2C2019\Finter\obj\Debug\Finter.csprojAssemblyReference.cache
+C:\workspace\finterMS2C2019\Finter\obj\Debug\Finter.FrmInicio.resources
+C:\workspace\finterMS2C2019\Finter\obj\Debug\Finter.FrmPasosDeCalculos.resources
+C:\workspace\finterMS2C2019\Finter\obj\Debug\Finter.FrmPasosDeCalculosNG.resources
+C:\workspace\finterMS2C2019\Finter\obj\Debug\Finter.Properties.Resources.resources
+C:\workspace\finterMS2C2019\Finter\obj\Debug\Finter.csproj.GenerateResource.cache
+C:\workspace\finterMS2C2019\Finter\obj\Debug\Finter.exe
+C:\workspace\finterMS2C2019\Finter\obj\Debug\Finter.pdb
+C:\workspace\finterMS2C2019\Finter\bin\Debug\Finter.exe.config
+C:\workspace\finterMS2C2019\Finter\bin\Debug\Finter.exe
+C:\workspace\finterMS2C2019\Finter\bin\Debug\Finter.pdb

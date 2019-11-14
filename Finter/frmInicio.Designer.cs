@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInicio));
             this.btnPasosCalculos = new System.Windows.Forms.Button();
-            this.btnFinalizar = new System.Windows.Forms.Button();
             this.groupPolinomios = new System.Windows.Forms.GroupBox();
             this.opNGRegresiva = new System.Windows.Forms.RadioButton();
             this.opNGProgre = new System.Windows.Forms.RadioButton();
@@ -45,18 +44,20 @@
             this.btnQuitarTodos = new System.Windows.Forms.Button();
             this.btnQuitarPunto = new System.Windows.Forms.Button();
             this.dgvPuntos = new System.Windows.Forms.DataGridView();
+            this.X = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Y = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Procesar = new System.Windows.Forms.Button();
             this.btnAlterarDatos = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtPolinomio = new System.Windows.Forms.TextBox();
             this.btnEspecializarEnK = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.X = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Y = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupPolinomios.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuntos)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,21 +73,6 @@
             this.btnPasosCalculos.Text = "Pasos de cálculo";
             this.btnPasosCalculos.UseVisualStyleBackColor = true;
             this.btnPasosCalculos.Click += new System.EventHandler(this.btnPasosCalculos_Click);
-            // 
-            // btnFinalizar
-            // 
-            this.btnFinalizar.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnFinalizar.FlatAppearance.BorderSize = 0;
-            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinalizar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.Location = new System.Drawing.Point(16, 649);
-            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(560, 31);
-            this.btnFinalizar.TabIndex = 4;
-            this.btnFinalizar.Text = "Finalizar";
-            this.btnFinalizar.UseVisualStyleBackColor = true;
-            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // groupPolinomios
             // 
@@ -109,7 +95,7 @@
             this.opNGRegresiva.Location = new System.Drawing.Point(103, 60);
             this.opNGRegresiva.Margin = new System.Windows.Forms.Padding(2);
             this.opNGRegresiva.Name = "opNGRegresiva";
-            this.opNGRegresiva.Size = new System.Drawing.Size(142, 23);
+            this.opNGRegresiva.Size = new System.Drawing.Size(119, 17);
             this.opNGRegresiva.TabIndex = 63;
             this.opNGRegresiva.Text = "Formula Regresiva";
             this.opNGRegresiva.UseVisualStyleBackColor = true;
@@ -131,7 +117,7 @@
             this.opLagrange.Location = new System.Drawing.Point(16, 47);
             this.opLagrange.Margin = new System.Windows.Forms.Padding(2);
             this.opLagrange.Name = "opLagrange";
-            this.opLagrange.Size = new System.Drawing.Size(87, 23);
+            this.opLagrange.Size = new System.Drawing.Size(73, 17);
             this.opLagrange.TabIndex = 59;
             this.opLagrange.TabStop = true;
             this.opLagrange.Text = "Lagrange";
@@ -168,7 +154,7 @@
             this.label2.Location = new System.Drawing.Point(8, 47);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 19);
+            this.label2.Size = new System.Drawing.Size(18, 13);
             this.label2.TabIndex = 44;
             this.label2.Text = "Y: ";
             // 
@@ -178,7 +164,7 @@
             this.label1.Location = new System.Drawing.Point(8, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 19);
+            this.label1.Size = new System.Drawing.Size(19, 13);
             this.label1.TabIndex = 43;
             this.label1.Text = "X: ";
             // 
@@ -187,7 +173,7 @@
             this.txtY.Location = new System.Drawing.Point(31, 47);
             this.txtY.Margin = new System.Windows.Forms.Padding(2);
             this.txtY.Name = "txtY";
-            this.txtY.Size = new System.Drawing.Size(52, 26);
+            this.txtY.Size = new System.Drawing.Size(52, 22);
             this.txtY.TabIndex = 1;
             this.txtY.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtY_KeyDown);
             // 
@@ -196,7 +182,7 @@
             this.txtX.Location = new System.Drawing.Point(31, 24);
             this.txtX.Margin = new System.Windows.Forms.Padding(2);
             this.txtX.Name = "txtX";
-            this.txtX.Size = new System.Drawing.Size(52, 26);
+            this.txtX.Size = new System.Drawing.Size(52, 22);
             this.txtX.TabIndex = 0;
             this.txtX.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtX_KeyDown);
             this.txtX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtX_KeyPress);
@@ -256,6 +242,20 @@
             this.dgvPuntos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPuntos.Size = new System.Drawing.Size(183, 228);
             this.dgvPuntos.TabIndex = 45;
+            // 
+            // X
+            // 
+            this.X.HeaderText = "X";
+            this.X.Name = "X";
+            this.X.ReadOnly = true;
+            this.X.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Y
+            // 
+            this.Y.HeaderText = "Y";
+            this.Y.Name = "Y";
+            this.Y.ReadOnly = true;
+            this.Y.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Procesar
             // 
@@ -320,6 +320,19 @@
             this.btnEspecializarEnK.UseVisualStyleBackColor = true;
             this.btnEspecializarEnK.Click += new System.EventHandler(this.btnEspecializarEnK_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Image = global::Finter.Properties.Resources.info;
+            this.pictureBox2.Location = new System.Drawing.Point(524, 15);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 57;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Finter.Properties.Resources.Finter3;
@@ -330,25 +343,12 @@
             this.pictureBox1.TabIndex = 56;
             this.pictureBox1.TabStop = false;
             // 
-            // X
-            // 
-            this.X.HeaderText = "X";
-            this.X.Name = "X";
-            this.X.ReadOnly = true;
-            this.X.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Y
-            // 
-            this.Y.HeaderText = "Y";
-            this.Y.Name = "Y";
-            this.Y.ReadOnly = true;
-            this.Y.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // FrmInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 689);
+            this.ClientSize = new System.Drawing.Size(589, 655);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnEspecializarEnK);
             this.Controls.Add(this.groupBox4);
@@ -359,7 +359,6 @@
             this.Controls.Add(this.btnQuitarTodos);
             this.Controls.Add(this.btnQuitarPunto);
             this.Controls.Add(this.dgvPuntos);
-            this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.btnPasosCalculos);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -368,7 +367,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FINTER";
+            this.Text = "FINTER - GRUPO MIXTO_7";
             this.Load += new System.EventHandler(this.frmInicio_Load);
             this.groupPolinomios.ResumeLayout(false);
             this.groupPolinomios.PerformLayout();
@@ -377,14 +376,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuntos)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnFinalizar;
         private System.Windows.Forms.GroupBox groupPolinomios;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
@@ -408,6 +406,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn X;
         private System.Windows.Forms.DataGridViewTextBoxColumn Y;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
