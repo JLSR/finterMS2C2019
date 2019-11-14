@@ -187,7 +187,7 @@ namespace Finter
             for (var i = primero; i >= 0; i--)
             {
                 if (i != primero && polinomio[i] >= 0) ret.Append(" + ");
-                if ((i != 0 && polinomio[i] != 1) || i == 0) ret.Append(new Fraccion(polinomio[i]).ToString().Insert(1, " "));
+                if ((i != 0 && polinomio[i] != 1) || i == 0) ret.Append(Math.Round(polinomio[i], 2));
                 if (i > 0) ret.Append("X");
                 if (i > 1) ret.Append("^").Append(i.ToString());
             }

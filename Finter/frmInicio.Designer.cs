@@ -176,6 +176,7 @@
             this.txtY.Size = new System.Drawing.Size(52, 22);
             this.txtY.TabIndex = 1;
             this.txtY.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtY_KeyDown);
+            this.txtY.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtY_KeyPress);
             // 
             // txtX
             // 
