@@ -45,14 +45,14 @@
             this.btnQuitarTodos = new System.Windows.Forms.Button();
             this.btnQuitarPunto = new System.Windows.Forms.Button();
             this.dgvPuntos = new System.Windows.Forms.DataGridView();
-            this.X = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Y = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Procesar = new System.Windows.Forms.Button();
             this.btnAlterarDatos = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtPolinomio = new System.Windows.Forms.TextBox();
             this.btnEspecializarEnK = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.X = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Y = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupPolinomios.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuntos)).BeginInit();
@@ -257,20 +257,6 @@
             this.dgvPuntos.Size = new System.Drawing.Size(183, 228);
             this.dgvPuntos.TabIndex = 45;
             // 
-            // X
-            // 
-            this.X.HeaderText = "X";
-            this.X.Name = "X";
-            this.X.ReadOnly = true;
-            this.X.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Y
-            // 
-            this.Y.HeaderText = "Y";
-            this.Y.Name = "Y";
-            this.Y.ReadOnly = true;
-            this.Y.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // Procesar
             // 
             this.Procesar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -344,6 +330,20 @@
             this.pictureBox1.TabIndex = 56;
             this.pictureBox1.TabStop = false;
             // 
+            // X
+            // 
+            this.X.HeaderText = "X";
+            this.X.Name = "X";
+            this.X.ReadOnly = true;
+            this.X.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Y
+            // 
+            this.Y.HeaderText = "Y";
+            this.Y.Name = "Y";
+            this.Y.ReadOnly = true;
+            this.Y.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -395,8 +395,6 @@
         private System.Windows.Forms.Button btnQuitarTodos;
         private System.Windows.Forms.Button btnQuitarPunto;
         private System.Windows.Forms.DataGridView dgvPuntos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn X;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Y;
         private System.Windows.Forms.Button Procesar;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox txtPolinomio;
@@ -408,6 +406,8 @@
         private System.Windows.Forms.RadioButton opNGProgre;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn X;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Y;
     }
 }
 

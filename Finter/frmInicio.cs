@@ -125,6 +125,9 @@ namespace Finter
         {
             BloquearControles();
 
+            //DEBEN ESTAR ORDENADOS LOS PUNTOS, SEGUN LAS Xi, PARA PODER SABER SI SON EQUIESPACIADAS
+            dgvPuntos.Sort(dgvPuntos.Columns[0], System.ComponentModel.ListSortDirection.Ascending);
+
             _valores = new List<KeyValuePair<double, double>>();
             foreach (DataGridViewRow row in dgvPuntos.Rows)
             {
@@ -171,28 +174,33 @@ namespace Finter
                 }
                 else
                 {
-                    _ng.ObtenerPasos();
+                    _ng.ObtenerPasos(dgvPuntos);
+
                 }
             }
         }
 
         private void btnEspecializarEnK_Click(object sender, EventArgs e)
         {
-            var stringK = Interaction.InputBox("Ingre el valor de K: ", "Especializacion del polinomio", "0.0"); //,100,0);
-            var k = Convert.ToDouble(stringK);
-            var pEnY = Convert.ToDouble(dgvPuntos.Rows[0].Cells[1].Value);
-            var resultado = "";
+            var stringK = Interaction.InputBox("Ingre el valor de K: ", "Especializacion del polinomio");//, "0.0"); //,100,0);
 
-            if (opNGProgre.Checked || opNGRegresiva.Checked)
+            if (stringK != "")
             {
-                resultado = _ng.ObtenerPk(k, pEnY);
+                var k = Convert.ToDouble(stringK);
+                var pEnY = Convert.ToDouble(dgvPuntos.Rows[0].Cells[1].Value);
+                var resultado = "";
+
+                if (opNGProgre.Checked || opNGRegresiva.Checked)
+                {
+                    resultado = _ng.ObtenerPk(k, pEnY);
+                }
+                else if (opLagrange.Checked)
+                {
+                    resultado = _lagrange.ObtenerPk(k, pEnY);
+                }
+
+                MessageBox.Show("P(" + k + ") = " + resultado, "Valor de la Imagen", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (opLagrange.Checked)
-            {
-                resultado = _lagrange.ObtenerPk(k, pEnY);
-            }
-            
-            MessageBox.Show("P(" + k + ") = " + resultado, "Valor de la Imagen", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

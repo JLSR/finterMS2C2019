@@ -65,7 +65,7 @@ namespace Finter
             }
         }
 
-        public void ObtenerPasos()
+        public void ObtenerPasos(DataGridView dgvPuntos)
         {
             var frmPasosDeCalculosNg = new FrmPasosDeCalculosNG();
             frmPasosDeCalculosNg.Show();
@@ -101,6 +101,23 @@ namespace Finter
                     frmPasosDeCalculosNg.dgvPasos.Rows[j].Cells[i].Value = listaDeListas[i][j].R;
                 }
             }
+
+            //GRADO DEL POLINOMIO
+            frmPasosDeCalculosNg.lblGradoP.Text += listaDeListas.Count.ToString();
+
+            //EQUIESPACIADO
+            Double h = Convert.ToDouble(dgvPuntos[0,1].Value) - Convert.ToDouble(dgvPuntos[0,0].Value);
+            string equiespaciado = "Si";
+            Double aux;
+
+            for (i = 2; i < dgvPuntos.RowCount && equiespaciado == "Si"; i++)
+            {
+                aux = Convert.ToDouble(dgvPuntos[0, i].Value) - Convert.ToDouble(dgvPuntos[0, i - 1].Value);
+                if (aux != h)
+                    equiespaciado = "No";
+            }
+
+            frmPasosDeCalculosNg.lblEquiespacio.Text += equiespaciado;
         }
 
         public string ObtenerPx(bool rbNgPro = false, bool rbNgReg = false)
