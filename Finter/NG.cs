@@ -132,7 +132,10 @@ namespace Finter
 
                     for (var j = 0; j <= i; j++)
                     {
-                        aux += "(X-" + valores[j].Key + ")";
+                        if (valores[j].Key < 0)
+                            aux += "(X+" + (valores[j].Key * (-1)) + ")";
+                        else
+                            aux += "(X-" + valores[j].Key + ")";
                     }
 
                     if (listaDeListas[i][0].R < 0)
@@ -154,7 +157,10 @@ namespace Finter
 
                     for (var j = valores.Count - 1; j >= valores.Count - 1 - i; j--)
                     {
-                        aux += "(X-" + valores[j].Key + ")";
+                        if (valores[j].Key < 0)
+                            aux += "(X+" + (valores[j].Key * (-1)) + ")";
+                        else
+                            aux += "(X-" + valores[j].Key + ")";
                     }
                     if (listaDeListas[i][listaDeListas[i].Count - 1].R < 0)
                         p += listaDeListas[i][listaDeListas[i].Count - 1].R + aux;

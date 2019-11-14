@@ -70,7 +70,7 @@ namespace Finter
 
         private void txtX_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != '.'))
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != ',') && (e.KeyChar != '-'))
             {
                 e.Handled = true;
             }
@@ -78,7 +78,7 @@ namespace Finter
 
         private void txtY_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != '.'))
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != ',') && (e.KeyChar != '-'))
             {
                 e.Handled = true;
             }
