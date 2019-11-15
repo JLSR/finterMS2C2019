@@ -27,6 +27,18 @@ namespace Finter
         {
             if (txtX.Text != "" && txtY.Text != "")
             {
+                if (!double.TryParse(txtX.Text, out _))
+                {
+                    MessageBox.Show("La Coordenada X no es válida.", "Valor no permitido en coordenada X", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!double.TryParse(txtY.Text, out _))
+                {
+                    MessageBox.Show("La Coordenada Y no es válida.", "Valor no permitido en coordenada Y", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 if (Double.Parse(txtY.Text) != 0)
                 {
                     var x = double.Parse(txtX.Text);
@@ -70,7 +82,10 @@ namespace Finter
 
         private void txtX_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != ',') && (e.KeyChar != '-'))
+            if (!(char.IsNumber(e.KeyChar)) && 
+                (e.KeyChar != (char)Keys.Back) && 
+                (e.KeyChar != ',') && 
+                (e.KeyChar != '-'))
             {
                 e.Handled = true;
             }
@@ -126,7 +141,7 @@ namespace Finter
 
         private void Procesar_Click(object sender, EventArgs e)
         {
-            if (dgvPuntos.Rows.Count == 0)
+            if (dgvPuntos.Rows.Count < 2)
             {
                 MessageBox.Show("Debe ingresar valores para procesar", "Coordenadas vacías", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
